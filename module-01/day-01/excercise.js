@@ -1,0 +1,80 @@
+// 1 MENCARI AREA PERSEGI PANJANG
+
+let lenRect = 5;
+let widRect = 10;
+const areaRect = lenRect * widRect;
+console.log(
+  "panjang => " + lenRect + ", lebar => " + widRect + ", luas => " + areaRect
+);
+console.log(`panjang => ${lenRect}, lebar => ${widRect}, luas => ${areaRect}`);
+
+lenRect = true;
+widRect = 15;
+// const perRect
+
+// 3
+
+const pi = Math.PI;
+console.log(pi);
+
+// 5
+// PROBLEM
+// MENCARI BERAPA TAHUN, BERAPA BULAN, BERAPA HARI DALAM TOTAL HARI
+
+// HINT
+// 1. 1 TAHUN = 365 HARI
+// 2. 1 BULAN = 30 HARI
+// 3. UNTUK MENCARI TAHUN, TOTAL HARI DIBAGI DENGAN 1 TAHUN(365), HASILNYA KEMUDIAN DIBULATKAN KEBAWAH
+// 4. UNTUK MENCARI BULAN, HASIL TOTAL HARI YANG SUDAH DIKURANG 1TAHUN(365)KEMUDIAN DIBAGI DENGAN 1 BULAN(30)
+// 5. UNTUK MENCARI HARI, HASIL TOTAL HARI YANG SUDAH DIKURANG 1TAHUN(365) DIKURANG HASIL TOTAL HARI YANG SUDAH DIKURANG 1 BULAN(30)
+
+// SOLUSI
+// 1. TAMPUNG DATA TOTAL HARI
+// 2. TAMPUNG DATA TAHUN = FLOOR(TOTAL HARI / 365)
+// 3. TAMPUNG DATA BULAN = FLOOR((TOTAL HARI % 365) / 30)
+// 4. TAMPUNG DATA HARI = (TOTAL HARI % 365) % 30
+
+// 6
+let dateFrom = new Date("2025-01-01");
+let dateTo = new Date("2025-01-31");
+console.log((dateTo - dateFrom) / (24 * 3600 * 1000));
+
+//
+// PROBLEM
+// MENCARI PERBEDAAN ANTAR 2 TANGGAL
+
+// HINT
+// 1. TANGGAL ITU DIMULAI DARI TAHUN 1970-01-01
+// 2. TIPE DATA DATE MEMPUNYAI BUILD IN METHOD UNTUK
+//  MENGAMBIL MILLISECOND DARI TAHUN 1970-01-01 SAMPAI TANGGAL SEKARANG (UNTUK TS)
+
+// SOLUSI
+// 1. TAMPUNG DATA TAHUN PERTAMA
+// 2. TAMPUNG DATA TAHUN KEDUA
+// 3. TAHUN PERTAMA - TAHUN KEDUA DAPAT MILISECOND (MILISECOND PERBEDAAN HARI KEDUA - HARI PERTAMA)
+// 4. TAHUN PERTAMA - TAHUN KEDUA DIBAGI 1 HARI ADA BERAPA MILISECOND
+
+// Write a code to check whether the number is odd or even
+// HINT
+// 1. CTH: BILANGAN GENAP = 2, 4, 6, 8, 10, 12
+// 2. CTH: BILANGAN GANJIL = 1, 3, 5, 7, 9, 11
+// 3. SETELAH BILANGAN GANJIL PASTI BILANGAN BULAT KEBALIKANNYA SETELAH BILANGAN GENAP PASTI BILANGAN GANJIL
+// 4. SEMUA ANGKA YANG MODULO 2 JIKA HASILNYA TIDAK ADA SISA = 0 MAKA PASTI BILANGAN BULAT
+
+let angka = 1;
+
+console.log(angka % 2);
+
+// 3.
+// HINT
+// RADIUS = 5
+// DIAMETER = 2 x radius
+// KELILING = 2 x PI x radius
+// PI = 3.14159265359
+// lingkaran = PI x radius pangkat 2
+
+let r = 5;
+let diameter = 2 * r;
+let keliling = 2 * 3.14159265359 * r;
+let lingkaran = 3.14159265359 * r ** 2;
+console.log(diameter, keliling, lingkaran);
