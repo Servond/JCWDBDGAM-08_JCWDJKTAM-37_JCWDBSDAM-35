@@ -1,7 +1,8 @@
 "use client";
 
 import { Formik, Form, FormikProps } from "formik";
-import axios from "axios";
+// import { useAuth } from "@/context/authContext";
+import { useAuthZustand } from "@/stores/useAuthZustand";
 
 interface ILogin {
   email: string;
@@ -9,29 +10,8 @@ interface ILogin {
 }
 
 export default function Login() {
-  const login = async (values: ILogin) => {
-    try {
-      let isExist: boolean = false;
-      const { data }: { data: ILogin[] } = await axios.get(
-        "https://evidentbeginner-us.backendless.app/api/data/user"
-      );
-
-      for (const user of data) {
-        if (user.email === values.email && user.password === values.password) {
-          isExist = true;
-          break;
-        }
-      }
-
-      if (isExist) {
-        alert("Login success");
-      } else {
-        throw new Error("User not found");
-      }
-    } catch (err: any) {
-      alert(err.message);
-    }
-  };
+  // const { login } = useAuth(); untuk usecontext
+  const { login } = useAuthZustand();
 
   return (
     <div className="flex flex-col items-center justify-center mt-[80px] gap-[40px]">
@@ -39,7 +19,7 @@ export default function Login() {
       <Formik
         initialValues={{ email: "", password: "" }}
         onSubmit={(values: ILogin) => {
-          login(values);
+          login(values.email, values.password);
         }}
       >
         {(props: FormikProps<ILogin>) => {
