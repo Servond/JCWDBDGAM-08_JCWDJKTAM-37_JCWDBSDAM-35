@@ -1,0 +1,18 @@
+{
+  "expense": [
+    {
+      "id": 1,
+      "title": "GoFood",
+      "type": "Expense",
+      "category": "Food",
+      "date": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "GoFood",
+      "type": "Expense",
+      "category": "Food",
+      "date": "2025-01-01T00:00:00.000Z"
+    }
+  ]
+}
