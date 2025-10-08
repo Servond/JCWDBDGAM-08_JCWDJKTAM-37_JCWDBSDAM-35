@@ -2,17 +2,27 @@
   "expense": [
     {
       "id": 1,
-      "title": "GoFood",
+      "title": "Gojek",
       "type": "Expense",
-      "category": "Food",
-      "date": "2025-01-01T00:00:00.000Z"
+      "category": "Transport",
+      "nominal": 50000,
+      "date": "2025-10-10T00:00:00.000Z"
     },
     {
       "id": 2,
-      "title": "GoFood",
+      "title": "Gofood",
       "type": "Expense",
       "category": "Food",
-      "date": "2025-01-01T00:00:00.000Z"
+      "nominal": 52000,
+      "date": "2025-10-12T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Gaji October",
+      "type": "Income",
+      "category": "Salary",
+      "nominal": 1000000000,
+      "date": "2025-10-12T00:00:00.000Z"
     }
   ]
 }

@@ -1,18 +1,14 @@
-import express, { Request, Response } from "express";
-import { readJson } from "./utils/json";
+import express from "express";
+import expenseRouter from "./routers/expense.router";
+
 const PORT = 8080;
 
 const app = express();
 app.use(express.json());
 
-app.get("/api", (req: Request, res: Response) => {
-  const data = readJson();
+// http:localhost:8080/api
 
-  res.json({
-    message: "OK",
-    data,
-  });
-});
+app.use("/expenses", expenseRouter); // http:localhost:8080/expenses
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
